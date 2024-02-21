@@ -1,0 +1,11 @@
+<!-- main/templates/edit_query.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Edit Query</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Update Query</button>
+  </form>
+{% endblock %}
